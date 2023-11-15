@@ -13,7 +13,9 @@ app.use(express.json());
 
 // Routes
 const usersRoutes = require("./Routes/userRoutes")
+const userAuthRoutes = require("./Routes/userAuthRoutes")
 app.use("/", usersRoutes)
+app.use("/auth", userAuthRoutes)
 // mongoose Conection
 
 mongoose.connect(process.env.CONECTION_STRING, {
